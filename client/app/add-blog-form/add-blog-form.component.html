@@ -1,0 +1,16 @@
+<div class="card">
+  <h4 class="card-header">Add new blog</h4>
+  <div class="card-body">
+    <form class="form-inline" [formGroup]="addBlogForm" (ngSubmit)="addBlog()">
+      <input class="form-control mr-2" type="text" name="title"
+             formControlName="title" placeholder="title">
+      <input class="form-control mr-2" type="text" name="description"
+             formControlName="description" placeholder="Description" >
+      <input class="form-control mr-2" type="text" name="imageURL"
+             formControlName="imageURL" placeholder="Image URL" >
+      <button class="btn btn-primary" type="submit" [disabled]="!addBlogForm.valid">
+        <i class="fa fa-plus"></i> Add
+      </button>
+    </form>
+  </div>
+</div>
